@@ -33,7 +33,7 @@ If you install the package as above, the tool will be usable from the terminal w
 
 
 ### Limitations
-- On Linux, `xcel` or `xclip` must be install for the clipboard copying to work properly.
+- On Linux, `xcel` or `xclip` must be installed for the clipboard copying to work properly.
 - The pdf library used by this tool only allows latin-1 characters to be add to the PDF. If you see `?` characters in your output, it's because whatever was there before was not a valid latin-1 character.
 
 
