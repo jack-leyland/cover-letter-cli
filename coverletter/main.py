@@ -152,9 +152,10 @@ def run():
         template = template.replace("${"+var+"}", content)
     
     if args.pdf:
-        output_name = args.name if args.name else name
+        default_filename = args.name if args.name else name
+        filename = input('Name of template: (default: '+default_filename+') ')
         date_suffix = datetime.now().strftime("_%m_%d_%Y")
-        text_to_pdf(template, output_name+date_suffix+".pdf")
+        text_to_pdf(template, filename+date_suffix+".pdf")
         print("PDF Saved.")
     
     try:
