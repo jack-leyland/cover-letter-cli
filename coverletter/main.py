@@ -153,9 +153,11 @@ def run():
     
     if args.pdf:
         default_filename = args.name if args.name else name
-        filename = input('Name of template: (default: '+default_filename+') ')
-        date_suffix = datetime.now().strftime("_%m_%d_%Y")
-        text_to_pdf(template, filename+date_suffix+".pdf")
+        filename = input('Enter pdf filename: (default: '+default_filename+') ')
+        if not filename: 
+            date_suffix = datetime.now().strftime("_%m_%d_%Y")
+            filename = default_filename+date_suffix
+        text_to_pdf(template, filename+".pdf")
         print("PDF Saved.")
     
     try:
